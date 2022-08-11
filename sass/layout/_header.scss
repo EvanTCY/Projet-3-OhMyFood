@@ -1,0 +1,47 @@
+
+/* only design the home page header */
+.header{
+    text-align: center;
+    
+    /* but this part is also apply for the logo in menu pages*/
+    .logoDiv{
+        margin: 25px 0px 10px 0px;
+        &__logo{
+            height: 28px;
+        }
+    } 
+
+    .position{
+        display: flex;
+        justify-content: center;
+        background-color: darken($backgroundColorPage, 3%);
+        margin-top: 3px;
+        @include fontSmall(bold);
+        &__icon{
+            position: relative;
+            top: 20px;
+            right: 20px;
+            color: $footerColor;
+        }
+        &__localisation{
+            margin: 20px 0px 20px 0px;
+            color: $footerColor;
+        }
+    }
+
+    .headerDescription{
+        background-color: $backgroundColorPage;
+        border: $backgroundColorPage solid 1px;
+        height: 300px;
+        padding: 0px 40px 0px 40px;
+        &__title1{
+            @include fontLarge;
+            margin-top: 35px ;
+            margin-bottom: -5px;
+        }
+        &__title2{
+            @include fontMedium(-weight);
+            color: $footerColor;
+        }
+    }
+}

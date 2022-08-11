@@ -1,0 +1,81 @@
+
+/* only design for menu pages */
+.mainMenuPages{
+    background-color: $backgroundColorPage;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 20px;
+    height: 1110px;
+    
+    .divTitleMain{
+        display: flex;
+        align-items: center;
+        position: relative;
+        bottom: 60px;
+        background-color: $backgroundColorPage;
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
+        &__title{
+            font-family: 'Shrikhand', cursive;
+            margin-left: 20px;
+            margin-bottom: 0px;
+            padding-top: 15px;
+            @include fontLarge(normal);
+            flex: 5;
+        }
+        &__heart{
+            @include fontLarge(normal);
+            flex: 1;
+            position: relative;
+            top: 15px;  
+        }
+    }
+
+    .sectionMenus{
+        margin-bottom: 60px;
+        
+        &__divTitleMenu{
+            margin: -50px 0px 15px 20px;
+            @include fontMedium;
+            &__title{
+                margin-bottom: 5px;
+            }
+            &__line{
+                width: 40px;
+                border: solid $tertiaryColor 1.5px;
+                background-color: $tertiaryColor;
+                margin: 0px;
+                position: relative;
+            }
+        }
+    
+        &__divChoiceBand{
+            margin: 0px 15px 0px 15px;
+            &__choiceBand{
+                @include band;
+                width: 100%;
+                flex-direction: column;
+                margin-bottom: 15px;
+                &__title{
+                    @include fontMedium(bold);
+                    margin: 10px 0px 0px 10px;
+                }
+                &__divDescription{
+                    display: flex;
+                    margin-bottom: 10px;
+                    &__description{
+                        @include fontSmall;
+                        margin: 5px 0px 0px 10px;
+                        flex: 5;
+                    }
+                    &__price{
+                        @include fontSmall(bold);
+                        margin: 5px 0px 0px 0px;
+                        flex: 1;
+                    }
+                }
+            }
+        }
+    }
+}

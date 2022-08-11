@@ -1,0 +1,35 @@
+/* the button take place in the home page header */ 
+.exploreButton{
+    @include button;
+    position: relative;
+    top: 35px;
+}
+/* the button take place just above the menu pages footer */ 
+.orderButton{
+    @include button;
+    position: relative;
+    bottom: 30px;
+    margin: 0px 80px 0px 80px;  
+}   
+
+/* arrow icon take place beside the logo, in menu pages */
+.arrow{
+    position: relative;
+    right: 20%;
+    bottom: 8px;
+    @include fontLarge(bold);
+    @include textDecoration;
+}
+
+/* a banner image illustrating the restaurant, in menu pages */
+.banner{
+    height: 300px;
+    width: 100%;
+    object-fit:cover;
+}
+
+/* design the two sections titles, home page */
+.sectionTitle{
+    @include fontLarge;
+    margin: 50px 0px 30px 20px;
+}

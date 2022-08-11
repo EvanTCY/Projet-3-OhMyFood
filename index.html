@@ -1,230 +1,165 @@
 <!DOCTYPE html>
 
-    <html lang="en">
 
+    <html lang="en">
 
 
         <head>
 
-
             <meta charset="UTF-8">
             <meta http-equiv="X-UA-Compatible" content="IE=edge">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
             <script src="https://kit.fontawesome.com/84c0d72042.js" crossorigin="anonymous"></script>
-
             <link rel="stylesheet" href="css/style.css">
-
             <title>ohmyfood</title>
         
-
         </head>
-
 
 
         <body>
     
+            <div class="loader">
+                <div class="loader__divAnimation">
+                <i class="fa-solid fa-utensils fa-3x loader__divAnimation__couverts"></i>
+                <p class="loader__divAnimation__p">Chargement du site</p>
+                </div>
+            </div>
 
-
-            <header>
-
-                <!--partie logo-->
+            <header class="header">
+                <!--logo part-->
                 <div class="logoDiv">
                     <img class="logoDiv__logo" src="images/logo/ohmyfood@2x.svg" alt="Oh my food - Logo">
                 </div>
-
-                <!--partie icon de position-->
-                <div class="positionDiv">
-                    <i class="positionDiv__icon fa-solid fa-location-dot"></i>
-                    <p>Paris, Belleville</p>
+                <!--icon and position part-->
+                <div class="position">
+                    <i class="position__icon fa-solid fa-location-dot"></i>
+                    <p class="position__localisation">Paris, Belleville</p>
                 </div>
-
-                <div class="descriptionHeader" >
-                    <p class="descriptionHeader__titre1">Réservez le menu qui vous convient</p>
-                    <p class="descriptionHeader__titre2">Découvrez les restaurants d'exception, sélectionnés par nos soins.</p>
-                    <a href="html/menu1.html">Explorer nos restaurants</a>
+                <div class="headerDescription" >
+                    <p class="headerDescription__title1">Réservez le menu qui vous convient</p>
+                    <p class="headerDescription__title2">Découvrez les restaurants d'exception, sélectionnés par nos soins.</p>
+                    <a class="exploreButton" href="html/menu1.html">Explorer nos restaurants</a>
                 </div>
-        
             </header>
 
-
-
             <main>
-
-
-                <section class="fonctionnement">
-
-                    <p class="sectionTitre">Fonctionnement</p>
-
+                <section>
+                    <p class="sectionTitle">Fonctionnement</p>
+                    <div>
+                        <div class="divOperationGuid">
+                            <p class="numbering">1</p>
+                            <a class="OperationGuidBand" href="#">
+                                <div class="OperationGuidBand__divDescription">
+                                    <div class="divIcon">
+                                        <i class="divIcon__icon fa-solid fa-mobile-screen-button"></i>
+                                    </div>
+                                    <div class="divP">
+                                        <p class="divP__description">Choisissez un restaurant</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="divOperationGuid">
+                            <p class="numbering">2</p>
+                            <a class="OperationGuidBand" href="#">
+                                <div class="OperationGuidBand__divDescription">
+                                    <div class="divIcon">
+                                        <i class="divIcon__icon fa-solid fa-mobile-screen-button"></i>
+                                    </div>
+                                    <div class="divP">
+                                        <p class="divP__description">Composez votre menu</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="divOperationGuid">
+                            <p class="numbering">3</p>
+                            <a class="OperationGuidBand" href="#">
+                                <div class="OperationGuidBand__divDescription">
+                                    <div class="divIcon">
+                                        <i class="divIcon__icon fa-solid fa-mobile-screen-button"></i>
+                                    </div>
+                                    <div class="divP">
+                                        <p class="divP__description">Dégustez au restaurant</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+                <section class="restaurantsSection">
+                    <p class="sectionTitle restaurantsTitle">Restaurants</p>
+                    <div class="restaurantsContainer">
+                        <a class="restaurant" href="#">
+                            <img class="restaurant__img" src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="La palette du goût">
+                            <p class="restaurant__new">Nouveau</p>
+                            <div class="restaurant__divDescription">
+                                <div class="restaurant__divDescription__divP">
+                                    <p class="restaurant__divDescription__divP--restaurantName">La palette du goût</p>
+                                    <p class="restaurant__divDescription__divP--restaurantLocalisation">Ménilmontant</p>
+                                </div>
+                                <div class="restaurant__divDescription__icon">
+                                    <i class="restaurant__divDescription__icon__heart fa-solid fa-heart"></i>
+                                </div>
+                            </div>
+                        </a>
+                        <a class="restaurant" href="#">
+                            <img class="restaurant__img" src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="La palette du goût">
+                            <p class="restaurant__new">Nouveau</p>
                     
-                    <div class="divFonctionnement">
-
-                        <div class="divEtiquetteFonctionnement">
-
-                            <p class="pNum">1</p>
-
-                            <a class="aFonctionnement" href="#">
-                                <div class="aFonctionnement__divDescrip">
-                                    <div class="divI">
-                                        <i class="divI__fonctionnementIcon fa-solid fa-mobile-screen-button"></i>
-                                    </div>
-                                    <div class="divP">
-                                        <p class="divP__fonctionnementP">Choisissez un restaurant</p>
-                                    </div>
+                            <div class="restaurant__divDescription">
+                                <div class="restaurant__divDescription__divP">
+                                    <p class="restaurant__divDescription__divP--restaurantName">La note enchantée</p>
+                                    <p class="restaurant__divDescription__divP--restaurantLocalisation">Charonne</p>
                                 </div>
-                            </a>
-
-                        </div>
-                        
-                        <div class="divEtiquetteFonctionnement">
-
-                            <p class="pNum">2</p>
-                        
-                            <a class="aFonctionnement" href="#">
-                                <div class="aFonctionnement__divDescrip">
-                                    <div class="divI">
-                                        <i class="divI__fonctionnementIcon fa-solid fa-list-ul"></i>
-                                    </div>
-                                    <div class="divP">
-                                        <p class="divP__fonctionnementP">Composez votre menu</p>
-                                    </div>
+                                <div class="restaurant__divDescription__icon">
+                                    <i class="restaurant__divDescription__icon__heart fa-solid fa-heart"></i>
                                 </div>
-                            </a>
-
-                        </div>
-
-                        <div class="divEtiquetteFonctionnement">
-
-                            <p class="pNum">3</p>
-
-                            <a class="aFonctionnement" href="#">
-                                <div class="aFonctionnement__divDescrip">
-                                    <div class="divI">
-                                        <i class="divI__fonctionnementIcon fa-solid fa-store"></i>
-                                    </div>
-                                    <div class="divP">
-                                        <p class="divP__fonctionnementP">Dégustez au restaurant</p>
-                                    </div>
+                            </div>
+                        </a>     
+                        <a class="restaurant" href="#">
+                            <img class="restaurant__img" src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="La palette du goût">
+                            <p class="restaurant__new restaurant__new--opacity">Nouveau</p>
+                            <div class="restaurant__divDescription">
+                                <div class="restaurant__divDescription__divP">
+                                    <p class="restaurant__divDescription__divP--restaurantName">À la française</p>
+                                    <p class="restaurant__divDescription__divP--restaurantLocalisation">Cité rouge</p>
                                 </div>
-                            </a>
-
-                        </div>
-        
+                                <div class="restaurant__divDescription__icon">
+                                    <i class="restaurant__divDescription__icon__heart fa-solid fa-heart"></i>
+                                </div>
+                            </div>
+                        </a>
+                        <a class="restaurant" href="#">
+                            <img class="restaurant__img" src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="La palette du goût">
+                            <p class="restaurant__new restaurant__new--opacity">Nouveau</p>
+                            <div class="restaurant__divDescription">
+                                <div class="restaurant__divDescription__divP">
+                                    <p class="restaurant__divDescription__divP--restaurantName">Le délice des sens</p>
+                                    <p class="restaurant__divDescription__divP--restaurantLocalisation">Folie-Méricourt</p>
+                                </div>
+                                <div class="restaurant__divDescription__icon">
+                                    <i class="restaurant__divDescription__icon__heart fa-solid fa-heart"></i>
+                                </div>
+                            </div>
+                        </a>
                     </div>
-        
                 </section>
-
-
-                <section class="restaurants">
-
-                    <p class="sectionTitre titreResto">Restaurants</p>
-        
-                    <div class="divA">
-        
-                        <a class="aRestaurants" href="#">
-                        <div class="boxA">
-                            
-                            <img class="boxA__img" src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="La palette du goût">
-                            <p class="boxA__pNouveau">Nouveau</p>
-                
-                            <div class="boxA__divDescrip">
-                                <div class="boxA__divDescrip__divP">
-                                    <p class="boxA__divDescrip__divP--palette">La palette du goût</p>
-                                    <p class="boxA__divDescrip__divP--menilmontant">Ménilmontant</p>
-                                </div>
-                                <div class="boxA__divDescrip__icon">
-                                    <i class="heartAccueil fa-solid fa-heart"></i>
-                                </div>
-                            </div>
-                
-                        </div>
-                        </a>
-        
-                        <a class="aRestaurants" href="#">
-                        <div class="boxA">
-                            
-                            <img class="boxA__img" src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="La note enchantée">
-                            <p class="boxA__pNouveau">Nouveau</p>
-                
-                            <div class="boxA__divDescrip">
-                                <div class="boxA__divDescrip__divP">
-                                    <p class="boxA__divDescrip__divP--palette">La note enchantée</p>
-                                    <p class="boxA__divDescrip__divP--menilmontant">Charonne</p>
-                                </div>
-                                <div class="boxA__divDescrip__icon">
-                                    <i class="heartAccueil fa-solid fa-heart"></i>
-                                </div>
-                            </div>
-                
-                        </div>
-                        </a>
-        
-                        <a class="aRestaurants" href="#">
-                        <div class="boxA">
-                            
-                            <img class="boxA__img" src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg " alt="À la française">
-                            <p class="boxA__pNouveau boxA__pNouveau--opacity">Nouveau</p>
-
-                            <div class="boxA__divDescrip">
-                                <div class="boxA__divDescrip__divP">
-                                    <p class="boxA__divDescrip__divP--palette">À la française</p>
-                                    <p class="boxA__divDescrip__divP--menilmontant">Cité Rouge</p>
-                                </div>
-                                <div class="boxA__divDescrip__icon">
-                                    <i class="heartAccueil fa-solid fa-heart"></i>
-                                </div>
-                            </div>
-                
-                        </div>
-                        </a>
-        
-                        <a class="aRestaurants" href="#">
-                        <div class="boxA">
-                            
-                            <img class="boxA__img" src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Le délice des sens">
-                            <p class="boxA__pNouveau boxA__pNouveau--opacity">Nouveau</p>
-
-                            <div class="boxA__divDescrip">
-                                <div class="boxA__divDescrip__divP">
-                                    <p class="boxA__divDescrip__divP--palette">Le délice des sens</p>
-                                    <p class="boxA__divDescrip__divP--menilmontant">Folie-Méricourt</p>
-                                </div>
-                                <div class="boxA__divDescrip__icon">
-                                    <i class="heartAccueil fa-solid fa-heart"></i>
-                                </div>
-                            </div>
-                
-                        </div>
-                        </a>
-        
-                    </div>
-        
-                </section>
-                
-
             </main>
 
-
             <footer>
-
                 <div>
                     <h3>ohmyfood</h3>
                 </div>
-
                 <ul class="fa-ul">
-                    <a class="aFooter" href="#"><li class="colorListe"><i class="fa-solid fa-utensils iconListe"></i>Proposer un restaurant</li></a>
-                    <a class="aFooter" href="#"><li class="colorListe"><i class="fa-solid fa-handshake-angle iconlisteTaille"></i>Devenir partenaire</li></a>
-                    <a class="aFooter" href="#"><li>Mentions légales</li></a>
-                    <a class="aFooter" href="#"><li>Contact</li></a>
+                    <a class="link" href="#"><li><i class="fa-solid fa-utensils icon"></i>Proposer un restaurant</li></a>
+                    <a class="link" href="#"><li><i class="fa-solid fa-handshake-angle icon--resize"></i>Devenir partenaire</li></a>
+                    <a class="link" href="#"><li class="link__colorListe">Mentions légales</li></a>
+                    <a class="link" href="#"><li class="link__colorListe">Contact</li></a>
                 </ul>
-
             </footer>
 
-
-
-
         </body>
-
 
 
     </html>

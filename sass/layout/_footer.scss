@@ -1,0 +1,33 @@
+footer{
+    background-color: $footerColor;
+    h3{
+        font-family: 'Shrikhand', cursive;
+        @include fontMedium;
+        color: white;
+        margin-left: 20px;
+        padding-top: 20px;
+    }
+    ul{
+        margin: 0px;
+        @include fontSmallMax;
+        position: relative;
+        right: 15px;
+        line-height: 22px;
+        padding-bottom: 30px;
+    
+        .link{
+            @include textDecoration(white);
+            &__colorListe{
+                color: $backgroundColorPage;
+            }
+        }
+        .icon{
+            font-size: 12px;
+            margin-right: 10px;
+            &--resize{
+                font-size: 9px;
+                margin-right: 10px 
+            }
+        }     
+    }
+}

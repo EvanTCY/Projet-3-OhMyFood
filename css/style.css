@@ -1,372 +1,404 @@
-/***@function fontColor ($color){
-    @if (lightness(background-color) >= 74% ) {
-        @return darken(color,  10%);
-    }@else{
-        @return $color;
-    }
-}****/
-/***
-@mixin fontColor (fontColors($color): black ) {
-    color: $color;
-}
-***/
+/* design the shadow for bands and buttons */
+/* describe the different font size for all page */
+/* to delete the link decoration */
+/* base design fot button */
+/* base design for "Fonctionnement" and menu bands */
+/*these keyframes design the loader animation*/
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&family=Shrikhand&display=swap");
-* {
-  font-family: "Roboto", sans-serif;
+@keyframes disappear {
+  to {
+    transform: scale(0);
+  }
 }
-
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
 body {
   margin: 0px;
 }
 
-@media screen and (max-width: 643px) {
-  /******************* HEADER **********************/
-  header {
-    text-align: center;
-  }
-  .logoDiv {
-    margin: 25px 0px 10px 0px;
-  }
-  .logoDiv__logo {
-    height: 28px;
-  }
-  .positionDiv {
-    display: flex;
-    justify-content: center;
-    background-color: #efefef;
-    margin-top: 3px;
-    font-size: 16px;
-    font-weight: bold;
-  }
-  .positionDiv__icon {
-    position: relative;
-    top: 20px;
-    right: 20px;
-    color: rgba(0, 0, 0, 0.781);
-  }
-  .positionDiv p {
-    margin: 20px 0px 20px 0px;
-    color: rgba(0, 0, 0, 0.781);
-  }
-  .descriptionHeader {
-    background-color: #F7F7F7;
-    border: #F7F7F7 solid 1px;
-    height: 300px;
-    padding: 0px 40px 0px 40px;
-  }
-  .descriptionHeader__titre1 {
-    font-weight: bold;
-    font-size: 25px;
-    margin-top: 35px;
-    margin-bottom: -5px;
-  }
-  .descriptionHeader__titre2 {
-    font-size: 17.5px;
-    font-weight: -weight;
-    color: rgba(0, 0, 0, 0.781);
-  }
-  .descriptionHeader a {
-    text-decoration: none;
-    color: white;
-    font-size: 16px;
-    font-weight: bold;
-    background: linear-gradient(to top left, #9356DC, #FF79DA);
-    padding: 1.3rem 2rem 1.3rem 2rem;
-    border-radius: 60px;
-    box-shadow: 0px 5px 15px 0px #c4c4c4;
-    letter-spacing: 0.5px;
-    text-align: center;
-    position: relative;
-    top: 35px;
-  }
-  /*** page menu ***/
-  .fleche {
-    position: relative;
-    right: 20%;
-    bottom: 8px;
-    font-weight: bold;
-    font-size: 25px;
-    text-decoration: none;
-    color: black;
-  }
-  .banniere {
-    height: 300px;
-    width: 100%;
-    object-fit: cover;
-  }
-  /**************************** MAIN ***********************/
-  .mainMenu {
-    background-color: #F7F7F7;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    top: 20px;
-    height: 1110px;
-  }
-  .divTitreMain {
-    display: flex;
-    align-items: center;
-    position: relative;
-    bottom: 60px;
-    background-color: #F7F7F7;
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px;
-  }
-  .divTitreMain__titre {
-    font-family: "Shrikhand", cursive;
-    margin-left: 20px;
-    margin-bottom: 0px;
-    padding-top: 15px;
-    font-weight: normal;
-    font-size: 25px;
-    flex: 5;
-  }
-  .divTitreMain__heart {
-    font-weight: normal;
-    font-size: 25px;
-    flex: 1;
-    position: relative;
-    top: 15px;
-  }
-  /************************ SECTION FONCTIONNEMENT **************/
-  .sectionTitre {
-    font-weight: bold;
-    font-size: 25px;
-    margin: 50px 0px 30px 20px;
-  }
-  .divEtiquetteFonctionnement {
-    align-items: center;
-  }
-  .pNum {
-    background-color: #9356DC;
-    color: white;
-    font-size: 16px;
-    font-weight: normal;
-    border-radius: 50%;
-    padding: 2px 7px 2px 7px;
-    float: left;
-    position: relative;
-    left: 15px;
-    top: 10px;
-  }
-  .aFonctionnement {
-    display: flex;
-    width: 90%;
-    text-decoration: none;
-    color: black;
-    background-color: #F7F7F7;
-    border-radius: 20px;
-    box-shadow: 0px 5px 15px 0px #dbdbdb;
-    margin-bottom: 20px;
-  }
-  .aFonctionnement__divDescrip {
-    display: flex;
-    background-color: #F7F7F7;
-    height: 75px;
-    align-items: center;
-    border-radius: 25px;
-  }
-  .divI {
-    margin: 0px 25px 0px 35px;
-  }
-  .divI__fonctionnementIcon {
-    color: rgb(159, 159, 159);
-    font-size: 17.5px;
-    font-weight: bold;
-  }
-  .divP__fonctionnementP {
-    font-size: 16px;
-    font-weight: bold;
-  }
-  /************************ SECTION RESTAURANT **************/
-  .restaurants {
-    background-color: #F7F7F7;
-    margin-top: 40px;
-    position: relative;
-    top: 20px;
-  }
-  .titreResto {
-    padding-top: 50px;
-  }
-  .divA {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-bottom: 50px;
-  }
-  .aRestaurants {
-    text-decoration: none;
-    color: black;
-  }
-  .boxA {
-    height: 250px;
-    margin: 0px 20px 20px 20px;
-    box-shadow: 0px 5px 15px 0px #dbdbdb;
-    border-radius: 20px;
-    background-color: #F7F7F7;
-  }
-  .boxA__img {
-    height: 70%;
-    width: 100%;
-    object-fit: cover;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-  }
-  .boxA__pNouveau {
-    float: right;
-    position: relative;
-    bottom: 180px;
-    right: 15px;
-    background-color: #99E2D0;
-    font-size: 14px;
-    font-weight: bold;
-    color: #0b8668;
-    padding: 7px 10px 7px 10px;
-    border-radius: 3px;
-  }
-  .boxA__pNouveau--opacity {
-    opacity: 0;
-  }
-  .boxA__divDescrip {
-    display: flex;
-    align-items: center;
-    background-color: #F7F7F7;
-    position: relative;
-    bottom: 2px;
-    border-radius: 20px;
-  }
-  .boxA__divDescrip__divP {
-    flex: 4;
-    line-height: 10px;
-  }
-  .boxA__divDescrip__divP--palette {
-    margin-left: 20px;
-    font-size: 17.5px;
-    font-weight: bold;
-  }
-  .boxA__divDescrip__divP--menilmontant {
-    margin-left: 20px;
-    font-size: 17.5px;
-    font-weight: normal;
-  }
-  .boxA__divDescrip__icon {
-    flex: 1;
-    position: relative;
-    left: 80px;
-    bottom: 5px;
-    font-weight: bold;
-    font-size: 25px;
-  }
-  .heartAccueil {
-    font-weight: normal;
-    font-size: 25px;
-  }
-  /********************* SECTION PAGES MENU *****************/
-  .sectionMenu {
-    margin-bottom: 60px;
-  }
-  .divTitreMenu {
-    margin: -50px 0px 15px 20px;
-    font-size: 17.5px;
-    font-weight: normal;
-  }
-  .divTitreMenu__titre {
-    margin-bottom: 5px;
-  }
-  .divTitreMenu__ligne {
-    width: 40px;
-    border: solid #99E2D0 1.5px;
-    background-color: #99E2D0;
-    margin: 0px;
-    position: relative;
-  }
-  .divChoix {
-    margin: 0px 15px 0px 15px;
-  }
-  .choix {
-    display: flex;
-    width: 90%;
-    text-decoration: none;
-    color: black;
-    background-color: white;
-    border-radius: 20px;
-    box-shadow: 0px 5px 15px 0px #dbdbdb;
-    width: 100%;
-    flex-direction: column;
-    margin-bottom: 15px;
-  }
-  .choix__titre {
-    font-size: 17.5px;
-    font-weight: bold;
-    margin: 10px 0px 0px 10px;
-  }
-  .choix__divDescription {
-    display: flex;
-    margin-bottom: 10px;
-  }
-  .choix__divDescription__description {
-    font-size: 16px;
-    font-weight: normal;
-    margin: 5px 0px 0px 10px;
-    flex: 5;
-  }
-  .choix__divDescription__prix {
-    font-size: 16px;
-    font-weight: bold;
-    margin: 5px 0px 0px 0px;
-    flex: 1;
-  }
-  .boutonCommander {
-    text-decoration: none;
-    color: white;
-    font-size: 16px;
-    font-weight: bold;
-    background: linear-gradient(to top left, #9356DC, #FF79DA);
-    padding: 1.3rem 2rem 1.3rem 2rem;
-    border-radius: 60px;
-    box-shadow: 0px 5px 15px 0px #c4c4c4;
-    letter-spacing: 0.5px;
-    text-align: center;
-    position: relative;
-    bottom: 30px;
-    margin: 0px 80px 0px 80px;
-  }
-  /************************ FOOTER  **************/
-  footer {
-    background-color: rgba(0, 0, 0, 0.781);
-  }
-  h3 {
-    font-family: "Shrikhand", cursive;
-    font-size: 17.5px;
-    font-weight: normal;
-    color: white;
-    margin-left: 20px;
-    padding-top: 20px;
-  }
-  ul {
-    margin: 0px;
-    font-size: 14px;
-    font-weight: normal;
-    position: relative;
-    right: 15px;
-    line-height: 22px;
-    padding-bottom: 30px;
-  }
-  ul .colorListe {
-    color: white;
-  }
-  ul .iconListe {
-    font-size: 12px;
-    margin-right: 10px;
-  }
-  ul .iconlisteTaille {
-    font-size: 9px;
-    margin-right: 10px;
-  }
-  .aFooter {
-    text-decoration: none;
-    color: white;
-  }
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+/* the button take place in the home page header */
+.exploreButton {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  background: linear-gradient(to top left, #9356DC, #FF79DA);
+  padding: 1.3rem 2rem 1.3rem 2rem;
+  border-radius: 60px;
+  box-shadow: 0px 5px 15px 0px #c4c4c4;
+  letter-spacing: 0.5px;
+  text-align: center;
+  position: relative;
+  top: 35px;
+}
+
+/* the button take place just above the menu pages footer */
+.orderButton {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  background: linear-gradient(to top left, #9356DC, #FF79DA);
+  padding: 1.3rem 2rem 1.3rem 2rem;
+  border-radius: 60px;
+  box-shadow: 0px 5px 15px 0px #c4c4c4;
+  letter-spacing: 0.5px;
+  text-align: center;
+  position: relative;
+  bottom: 30px;
+  margin: 0px 80px 0px 80px;
+}
+
+/* arrow icon take place beside the logo, in menu pages */
+.arrow {
+  position: relative;
+  right: 20%;
+  bottom: 8px;
+  font-weight: bold;
+  font-size: 25px;
+  text-decoration: none;
+  color: black;
+}
+
+/* a banner image illustrating the restaurant, in menu pages */
+.banner {
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* design the two sections titles, home page */
+.sectionTitle {
+  font-weight: bold;
+  font-size: 25px;
+  margin: 50px 0px 30px 20px;
+}
+
+.loader {
+  display: grid;
+  place-items: center;
+  position: fixed;
+  inset: 0;
+  height: 100vh;
+  background-color: #ffffff;
+  z-index: 1;
+  opacity: 0.9;
+  animation: disappear 0s 3s forwards;
+}
+.loader__divAnimation {
+  display: grid;
+  place-items: center;
+}
+.loader__divAnimation__couverts {
+  animation: spin 1s infinite;
+  color: #9356DC;
+}
+.loader__divAnimation__p {
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 30px;
+}
+
+/* only design the home page header */
+.header {
+  text-align: center;
+  /* but this part is also apply for the logo in menu pages*/
+}
+.header .logoDiv {
+  margin: 25px 0px 10px 0px;
+}
+.header .logoDiv__logo {
+  height: 28px;
+}
+.header .position {
+  display: flex;
+  justify-content: center;
+  background-color: #efefef;
+  margin-top: 3px;
+  font-size: 16px;
+  font-weight: bold;
+}
+.header .position__icon {
+  position: relative;
+  top: 20px;
+  right: 20px;
+  color: rgba(0, 0, 0, 0.781);
+}
+.header .position__localisation {
+  margin: 20px 0px 20px 0px;
+  color: rgba(0, 0, 0, 0.781);
+}
+.header .headerDescription {
+  background-color: #F7F7F7;
+  border: #F7F7F7 solid 1px;
+  height: 300px;
+  padding: 0px 40px 0px 40px;
+}
+.header .headerDescription__title1 {
+  font-weight: bold;
+  font-size: 25px;
+  margin-top: 35px;
+  margin-bottom: -5px;
+}
+.header .headerDescription__title2 {
+  font-size: 17.5px;
+  font-weight: -weight;
+  color: rgba(0, 0, 0, 0.781);
+}
+
+/* only design for menu pages */
+.mainMenuPages {
+  background-color: #F7F7F7;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 20px;
+  height: 1110px;
+}
+.mainMenuPages .divTitleMain {
+  display: flex;
+  align-items: center;
+  position: relative;
+  bottom: 60px;
+  background-color: #F7F7F7;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+.mainMenuPages .divTitleMain__title {
+  font-family: "Shrikhand", cursive;
+  margin-left: 20px;
+  margin-bottom: 0px;
+  padding-top: 15px;
+  font-weight: normal;
+  font-size: 25px;
+  flex: 5;
+}
+.mainMenuPages .divTitleMain__heart {
+  font-weight: normal;
+  font-size: 25px;
+  flex: 1;
+  position: relative;
+  top: 15px;
+}
+.mainMenuPages .sectionMenus {
+  margin-bottom: 60px;
+}
+.mainMenuPages .sectionMenus__divTitleMenu {
+  margin: -50px 0px 15px 20px;
+  font-size: 17.5px;
+  font-weight: normal;
+}
+.mainMenuPages .sectionMenus__divTitleMenu__title {
+  margin-bottom: 5px;
+}
+.mainMenuPages .sectionMenus__divTitleMenu__line {
+  width: 40px;
+  border: solid #99E2D0 1.5px;
+  background-color: #99E2D0;
+  margin: 0px;
+  position: relative;
+}
+.mainMenuPages .sectionMenus__divChoiceBand {
+  margin: 0px 15px 0px 15px;
+}
+.mainMenuPages .sectionMenus__divChoiceBand__choiceBand {
+  display: flex;
+  text-decoration: none;
+  color: black;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0px 5px 15px 0px #dbdbdb;
+  width: 100%;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+.mainMenuPages .sectionMenus__divChoiceBand__choiceBand__title {
+  font-size: 17.5px;
+  font-weight: bold;
+  margin: 10px 0px 0px 10px;
+}
+.mainMenuPages .sectionMenus__divChoiceBand__choiceBand__divDescription {
+  display: flex;
+  margin-bottom: 10px;
+}
+.mainMenuPages .sectionMenus__divChoiceBand__choiceBand__divDescription__description {
+  font-size: 16px;
+  font-weight: normal;
+  margin: 5px 0px 0px 10px;
+  flex: 5;
+}
+.mainMenuPages .sectionMenus__divChoiceBand__choiceBand__divDescription__price {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 5px 0px 0px 0px;
+  flex: 1;
+}
+
+.divOperationGuid {
+  margin: 0px 20px 0px 20px;
+}
+.divOperationGuid .numbering {
+  background-color: #9356DC;
+  color: white;
+  font-size: 16px;
+  font-weight: normal;
+  border-radius: 50%;
+  padding: 2px 7px 2px 7px;
+  margin-top: 25px;
+  position: absolute;
+  left: 10px;
+}
+.divOperationGuid .OperationGuidBand {
+  display: flex;
+  text-decoration: none;
+  color: black;
+  background-color: #F7F7F7;
+  border-radius: 20px;
+  box-shadow: 0px 5px 15px 0px #dbdbdb;
+  margin-bottom: 20px;
+}
+.divOperationGuid .OperationGuidBand__divDescription {
+  display: flex;
+  background-color: #F7F7F7;
+  height: 75px;
+  align-items: center;
+  border-radius: 25px;
+}
+.divOperationGuid .divIcon {
+  margin: 0px 25px 0px 35px;
+}
+.divOperationGuid .divIcon__icon {
+  color: rgb(159, 159, 159);
+  font-size: 17.5px;
+  font-weight: bold;
+}
+.divOperationGuid .divP__description {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.restaurantsSection {
+  background-color: #F7F7F7;
+  margin-top: 40px;
+  position: relative;
+  top: 20px;
+}
+.restaurantsSection .restaurantsTitle {
+  padding-top: 50px;
+}
+.restaurantsSection .restaurantsContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 50px;
+}
+.restaurantsSection .restaurant {
+  text-decoration: none;
+  color: black;
+  height: 250px;
+  margin: 0px 20px 20px 20px;
+  box-shadow: 0px 5px 15px 0px #dbdbdb;
+  border-radius: 20px;
+  background-color: #F7F7F7;
+}
+.restaurantsSection .restaurant__img {
+  height: 70%;
+  width: 100%;
+  object-fit: cover;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.restaurantsSection .restaurant__new {
+  float: right;
+  position: relative;
+  bottom: 180px;
+  right: 15px;
+  background-color: #99E2D0;
+  font-size: 14px;
+  font-weight: bold;
+  color: #278870;
+  padding: 7px 10px 7px 10px;
+  border-radius: 3px;
+}
+.restaurantsSection .restaurant__new--opacity {
+  opacity: 0;
+}
+.restaurantsSection .restaurant__divDescription {
+  display: flex;
+  align-items: center;
+  background-color: #F7F7F7;
+  position: relative;
+  bottom: 2px;
+  border-radius: 20px;
+}
+.restaurantsSection .restaurant__divDescription__divP {
+  flex: 4;
+  line-height: 10px;
+}
+.restaurantsSection .restaurant__divDescription__divP--restaurantName {
+  margin-left: 20px;
+  font-size: 17.5px;
+  font-weight: bold;
+}
+.restaurantsSection .restaurant__divDescription__divP--restaurantLocalisation {
+  margin-left: 20px;
+  font-size: 17.5px;
+  font-weight: normal;
+}
+.restaurantsSection .restaurant__divDescription__icon {
+  flex: 1;
+  position: relative;
+  left: 80px;
+  bottom: 5px;
+  font-weight: bold;
+  font-size: 25px;
+}
+.restaurantsSection .restaurant__divDescription__icon__heart {
+  font-weight: normal;
+  font-size: 25px;
+}
+
+footer {
+  background-color: rgba(0, 0, 0, 0.781);
+}
+footer h3 {
+  font-family: "Shrikhand", cursive;
+  font-size: 17.5px;
+  font-weight: normal;
+  color: white;
+  margin-left: 20px;
+  padding-top: 20px;
+}
+footer ul {
+  margin: 0px;
+  font-size: 14px;
+  font-weight: normal;
+  position: relative;
+  right: 15px;
+  line-height: 22px;
+  padding-bottom: 30px;
+}
+footer ul .link {
+  text-decoration: none;
+  color: white;
+}
+footer ul .link__colorListe {
+  color: #F7F7F7;
+}
+footer ul .icon {
+  font-size: 12px;
+  margin-right: 10px;
+}
+footer ul .icon--resize {
+  font-size: 9px;
+  margin-right: 10px;
 }
 
 /*# sourceMappingURL=style.css.map */
