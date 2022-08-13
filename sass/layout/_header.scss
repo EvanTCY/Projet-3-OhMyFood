@@ -5,7 +5,32 @@
     
     /* but this part is also apply for the logo in menu pages*/
     .logoDiv{
-        margin: 25px 0px 10px 0px;
+        padding: 25px 0px 10px 0px;
+        /*the intervention of "position : relative" places "logoDiv" on top of the class ".position". 
+        this manipulation allows to see the shadow on top of this class, and not that it is hidden by it*/
+        position: relative;
+        box-shadow: 0px 3px 5px darken($backgroundColorPage , 15%);
+        &--menu{
+            padding: 25px 0px 15px 0px;
+            box-shadow: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &__arrowLink{
+                position: absolute;
+                left: 30px; top: 33px;
+                float: left;
+                &__arrow{
+                    position: relative;
+                    right: 20%;
+                    bottom: 8px;
+                    font-size: 22px;
+                    color: $footerColor;
+                    @include textDecoration;
+                }
+            }
+
+        }
         &__logo{
             height: 28px;
         }
@@ -15,7 +40,6 @@
         display: flex;
         justify-content: center;
         background-color: darken($backgroundColorPage, 3%);
-        margin-top: 3px;
         @include fontSmall(bold);
         &__icon{
             position: relative;

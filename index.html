@@ -11,7 +11,7 @@
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <script src="https://kit.fontawesome.com/84c0d72042.js" crossorigin="anonymous"></script>
             <link rel="stylesheet" href="css/style.css">
-            <title>ohmyfood</title>
+            <title>ohmyfood - Accueil</title>
         
         </head>
 
@@ -19,132 +19,151 @@
         <body>
     
             <div class="loader">
+
                 <div class="loader__divAnimation">
                 <i class="fa-solid fa-utensils fa-3x loader__divAnimation__couverts"></i>
                 <p class="loader__divAnimation__p">Chargement du site</p>
                 </div>
+
             </div>
 
+
             <header class="header">
+
                 <!--logo part-->
                 <div class="logoDiv">
                     <img class="logoDiv__logo" src="images/logo/ohmyfood@2x.svg" alt="Oh my food - Logo">
                 </div>
+
                 <!--icon and position part-->
                 <div class="position">
                     <i class="position__icon fa-solid fa-location-dot"></i>
                     <p class="position__localisation">Paris, Belleville</p>
                 </div>
+
                 <div class="headerDescription" >
                     <p class="headerDescription__title1">Réservez le menu qui vous convient</p>
                     <p class="headerDescription__title2">Découvrez les restaurants d'exception, sélectionnés par nos soins.</p>
-                    <a class="exploreButton" href="html/menu1.html">Explorer nos restaurants</a>
+                    <a class="exploreButton" href="#">Explorer nos restaurants</a>
                 </div>
+
             </header>
 
+
             <main>
+
                 <section>
+
                     <p class="sectionTitle">Fonctionnement</p>
-                    <div>
+
                         <div class="divOperationGuid">
                             <p class="numbering">1</p>
                             <a class="OperationGuidBand" href="#">
-                                <div class="OperationGuidBand__divDescription">
-                                    <div class="divIcon">
-                                        <i class="divIcon__icon fa-solid fa-mobile-screen-button"></i>
-                                    </div>
-                                    <div class="divP">
-                                        <p class="divP__description">Choisissez un restaurant</p>
-                                    </div>
+                                <div class="divIcon">
+                                    <i class="divIcon__icon fa-solid fa-mobile-screen-button"></i>
+                                </div>
+                                <div class="divP">
+                                    <p class="divP__description">Choisissez un restaurant</p>
                                 </div>
                             </a>
                         </div>
+
                         <div class="divOperationGuid">
                             <p class="numbering">2</p>
                             <a class="OperationGuidBand" href="#">
-                                <div class="OperationGuidBand__divDescription">
-                                    <div class="divIcon">
-                                        <i class="divIcon__icon fa-solid fa-mobile-screen-button"></i>
-                                    </div>
-                                    <div class="divP">
-                                        <p class="divP__description">Composez votre menu</p>
-                                    </div>
+                                <div class="divIcon">
+                                    <i class="divIcon__icon fa-solid fa-list-ul"></i>
+                                </div>
+                                <div class="divP">
+                                    <p class="divP__description">Composez votre menu</p>
                                 </div>
                             </a>
                         </div>
+
                         <div class="divOperationGuid">
                             <p class="numbering">3</p>
                             <a class="OperationGuidBand" href="#">
-                                <div class="OperationGuidBand__divDescription">
-                                    <div class="divIcon">
-                                        <i class="divIcon__icon fa-solid fa-mobile-screen-button"></i>
-                                    </div>
-                                    <div class="divP">
-                                        <p class="divP__description">Dégustez au restaurant</p>
-                                    </div>
+                                <div class="divIcon">
+                                    <i class="divIcon__icon fa-solid fa-store"></i>
+                                </div>
+                                <div class="divP">
+                                    <p class="divP__description">Dégustez au restaurant</p>
                                 </div>
                             </a>
                         </div>
-                    </div>
+
                 </section>
+
                 <section class="restaurantsSection">
+
                     <p class="sectionTitle restaurantsTitle">Restaurants</p>
+
                     <div class="restaurantsContainer">
-                        <a class="restaurant" href="#">
-                            <img class="restaurant__img" src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="La palette du goût">
-                            <p class="restaurant__new">Nouveau</p>
+
+                        <div class="restaurant">
+                           <a href="#"><img class="restaurant__img" src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="La palette du goût">
+                            <p class="restaurant__new">Nouveau</p></a>
                             <div class="restaurant__divDescription">
-                                <div class="restaurant__divDescription__divP">
+                                <a href="#" class="restaurant__divDescription__divP">
                                     <p class="restaurant__divDescription__divP--restaurantName">La palette du goût</p>
                                     <p class="restaurant__divDescription__divP--restaurantLocalisation">Ménilmontant</p>
-                                </div>
+                                </a>
                                 <div class="restaurant__divDescription__icon">
                                     <i class="restaurant__divDescription__icon__heart fa-solid fa-heart"></i>
+                                    <i class="restaurant__divDescription__icon__heart--animation fa-solid fa-heart"></i>
                                 </div>
                             </div>
-                        </a>
-                        <a class="restaurant" href="#">
-                            <img class="restaurant__img" src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="La palette du goût">
-                            <p class="restaurant__new">Nouveau</p>
-                    
+                        </div>
+
+                        <div class="restaurant">
+                            <a href="#"><img class="restaurant__img" src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="La palette du goût">
+                            <p class="restaurant__new">Nouveau</p></a>
                             <div class="restaurant__divDescription">
-                                <div class="restaurant__divDescription__divP">
+                                <a href="#" class="restaurant__divDescription__divP">
                                     <p class="restaurant__divDescription__divP--restaurantName">La note enchantée</p>
                                     <p class="restaurant__divDescription__divP--restaurantLocalisation">Charonne</p>
-                                </div>
+                                </a>
                                 <div class="restaurant__divDescription__icon">
                                     <i class="restaurant__divDescription__icon__heart fa-solid fa-heart"></i>
+                                    <i class="restaurant__divDescription__icon__heart--animation fa-solid fa-heart"></i>
                                 </div>
                             </div>
-                        </a>     
-                        <a class="restaurant" href="#">
-                            <img class="restaurant__img" src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="La palette du goût">
-                            <p class="restaurant__new restaurant__new--opacity">Nouveau</p>
+                        </div>     
+
+                        <div class="restaurant">
+                            <a href="html/aLaFrancaise.html"><img class="restaurant__img" src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="La palette du goût">
+                            <p class="restaurant__new restaurant__new--opacity">Nouveau</p></a>
                             <div class="restaurant__divDescription">
-                                <div class="restaurant__divDescription__divP">
+                                <a href="html/aLaFrancaise.html" class="restaurant__divDescription__divP">
                                     <p class="restaurant__divDescription__divP--restaurantName">À la française</p>
                                     <p class="restaurant__divDescription__divP--restaurantLocalisation">Cité rouge</p>
-                                </div>
+                                </a>
                                 <div class="restaurant__divDescription__icon">
                                     <i class="restaurant__divDescription__icon__heart fa-solid fa-heart"></i>
+                                    <i class="restaurant__divDescription__icon__heart--animation fa-solid fa-heart"></i>
                                 </div>
                             </div>
-                        </a>
-                        <a class="restaurant" href="#">
-                            <img class="restaurant__img" src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="La palette du goût">
-                            <p class="restaurant__new restaurant__new--opacity">Nouveau</p>
+                        </div>
+
+                        <div class="restaurant">
+                            <a href="#"><img class="restaurant__img" src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="La palette du goût">
+                            <p class="restaurant__new restaurant__new--opacity">Nouveau</p></a>
                             <div class="restaurant__divDescription">
-                                <div class="restaurant__divDescription__divP">
+                                <a href="#" class="restaurant__divDescription__divP">
                                     <p class="restaurant__divDescription__divP--restaurantName">Le délice des sens</p>
                                     <p class="restaurant__divDescription__divP--restaurantLocalisation">Folie-Méricourt</p>
-                                </div>
+                                </a>
                                 <div class="restaurant__divDescription__icon">
                                     <i class="restaurant__divDescription__icon__heart fa-solid fa-heart"></i>
+                                    <i class="restaurant__divDescription__icon__heart--animation fa-solid fa-heart"></i>
                                 </div>
                             </div>
-                        </a>
+                        </div>
+
                     </div>
+
                 </section>
+
             </main>
 
             <footer>

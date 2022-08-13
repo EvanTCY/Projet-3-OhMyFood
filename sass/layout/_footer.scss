@@ -18,7 +18,7 @@ footer{
         .link{
             @include textDecoration(white);
             &__colorListe{
-                color: $backgroundColorPage;
+                color: darken($backgroundColorPage, 15%);
             }
         }
         .icon{

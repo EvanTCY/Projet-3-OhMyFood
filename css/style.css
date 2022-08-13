@@ -10,9 +10,27 @@
     transform: scale(0);
   }
 }
-@keyframes spin {
+@keyframes loader-spiner {
   to {
     transform: rotate(360deg);
+  }
+}
+@keyframes apparition {
+  from {
+    opacity: 0;
+    transform: translateY(1000px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@keyframes band-spiner {
+  0% {
+    transform: rotate(-270deg);
+  }
+  100% {
+    transform: rotate(0deg);
   }
 }
 body {
@@ -23,20 +41,33 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
 /* the button take place in the home page header */
 .exploreButton {
   text-decoration: none;
   color: white;
   font-size: 16px;
-  font-weight: bold;
+  font-weight: 501;
   background: linear-gradient(to top left, #9356DC, #FF79DA);
-  padding: 1.3rem 2rem 1.3rem 2rem;
+  margin-left: auto;
+  margin-right: auto;
   border-radius: 60px;
   box-shadow: 0px 5px 15px 0px #c4c4c4;
   letter-spacing: 0.5px;
   text-align: center;
+  transform: background-color, box-shadow;
+  transition: background-color 1s, box-shadow 0.5s 0.5s;
   position: relative;
   top: 35px;
+  padding: 1.2rem;
+}
+.exploreButton:hover {
+  background: #ff93e1;
+  box-shadow: 0px 5px 15px 5px #b7b7b7;
 }
 
 /* the button take place just above the menu pages footer */
@@ -44,16 +75,24 @@ body {
   text-decoration: none;
   color: white;
   font-size: 16px;
-  font-weight: bold;
+  font-weight: 501;
   background: linear-gradient(to top left, #9356DC, #FF79DA);
-  padding: 1.3rem 2rem 1.3rem 2rem;
+  margin-left: auto;
+  margin-right: auto;
   border-radius: 60px;
   box-shadow: 0px 5px 15px 0px #c4c4c4;
   letter-spacing: 0.5px;
   text-align: center;
-  position: relative;
+  transform: background-color, box-shadow;
+  transition: background-color 1s, box-shadow 0.5s 0.5s;
   bottom: 30px;
-  margin: 0px 80px 0px 80px;
+  padding: 1rem 3rem 1rem 3rem;
+  position: relative;
+  bottom: 20px;
+}
+.orderButton:hover {
+  background: #ff93e1;
+  box-shadow: 0px 5px 15px 5px #b7b7b7;
 }
 
 /* arrow icon take place beside the logo, in menu pages */
@@ -90,14 +129,14 @@ body {
   background-color: #ffffff;
   z-index: 1;
   opacity: 0.9;
-  animation: disappear 0s 3s forwards;
+  animation: disappear 0s 1s forwards;
 }
 .loader__divAnimation {
   display: grid;
   place-items: center;
 }
 .loader__divAnimation__couverts {
-  animation: spin 1s infinite;
+  animation: loader-spiner 1s infinite;
   color: #9356DC;
 }
 .loader__divAnimation__p {
@@ -112,7 +151,33 @@ body {
   /* but this part is also apply for the logo in menu pages*/
 }
 .header .logoDiv {
-  margin: 25px 0px 10px 0px;
+  padding: 25px 0px 10px 0px;
+  /*the intervention of "position : relative" places "logoDiv" on top of the class ".position". 
+  this manipulation allows to see the shadow on top of this class, and not that it is hidden by it*/
+  position: relative;
+  box-shadow: 0px 3px 5px #d1d1d1;
+}
+.header .logoDiv--menu {
+  padding: 25px 0px 15px 0px;
+  box-shadow: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header .logoDiv--menu__arrowLink {
+  position: absolute;
+  left: 30px;
+  top: 33px;
+  float: left;
+}
+.header .logoDiv--menu__arrowLink__arrow {
+  position: relative;
+  right: 20%;
+  bottom: 8px;
+  font-size: 22px;
+  color: rgba(0, 0, 0, 0.781);
+  text-decoration: none;
+  color: black;
 }
 .header .logoDiv__logo {
   height: 28px;
@@ -121,7 +186,6 @@ body {
   display: flex;
   justify-content: center;
   background-color: #efefef;
-  margin-top: 3px;
   font-size: 16px;
   font-weight: bold;
 }
@@ -160,18 +224,17 @@ body {
   flex-direction: column;
   position: relative;
   top: 20px;
-  height: 1110px;
+  height: 1160px;
 }
-.mainMenuPages .divTitleMain {
+.mainMenuPages__divTitleMain {
   display: flex;
-  align-items: center;
   position: relative;
   bottom: 60px;
   background-color: #F7F7F7;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
 }
-.mainMenuPages .divTitleMain__title {
+.mainMenuPages__divTitleMain__title {
   font-family: "Shrikhand", cursive;
   margin-left: 20px;
   margin-bottom: 0px;
@@ -180,15 +243,44 @@ body {
   font-size: 25px;
   flex: 5;
 }
-.mainMenuPages .divTitleMain__heart {
-  font-weight: normal;
-  font-size: 25px;
-  flex: 1;
+.mainMenuPages__divTitleMain__divHeart {
+  display: flex;
+  flex: 2;
+  justify-content: center;
+  align-items: center;
   position: relative;
   top: 15px;
 }
+.mainMenuPages__divTitleMain .heart {
+  font-weight: normal;
+  font-size: 25px;
+}
+.mainMenuPages__divTitleMain .heart--animation {
+  opacity: 0;
+  font-size: 25px;
+  color: #9356DC;
+  position: absolute;
+  scale: 1;
+  text-shadow: 0 0 0 0 #9356DC;
+  animation: pulse 1.3s infinite;
+  transition: all 0.5s, transform 0.5s 0.3s;
+}
+.mainMenuPages__divTitleMain .heart--animation:hover {
+  opacity: 1;
+  transform: scale(1.15);
+  background: linear-gradient(to bottom, #9356DC 0%, #FF79DA 100%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
 .mainMenuPages .sectionMenus {
   margin-bottom: 60px;
+  animation: apparition 1s ease-in-out;
+}
+.mainMenuPages .sectionMenus--apparitionPlats {
+  animation: apparition 1.3s ease-in-out;
+}
+.mainMenuPages .sectionMenus--apparitionDesserts {
+  animation: apparition 1.6s ease-in-out;
 }
 .mainMenuPages .sectionMenus__divTitleMenu {
   margin: -50px 0px 15px 20px;
@@ -208,37 +300,76 @@ body {
 .mainMenuPages .sectionMenus__divChoiceBand {
   margin: 0px 15px 0px 15px;
 }
-.mainMenuPages .sectionMenus__divChoiceBand__choiceBand {
+.mainMenuPages .sectionMenus__divChoiceBand .band {
   display: flex;
   text-decoration: none;
   color: black;
   background-color: white;
-  border-radius: 20px;
+  border-radius: 15px;
   box-shadow: 0px 5px 15px 0px #dbdbdb;
-  width: 100%;
-  flex-direction: column;
+  overflow: hidden;
+  cursor: pointer;
   margin-bottom: 15px;
 }
-.mainMenuPages .sectionMenus__divChoiceBand__choiceBand__title {
+.mainMenuPages .sectionMenus__divChoiceBand .band__description {
+  padding: 12px 0px 12px 0px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin: 0px 10px 0px 10px;
+}
+.mainMenuPages .sectionMenus__divChoiceBand .band__description__title {
+  margin: 0;
   font-size: 17.5px;
   font-weight: bold;
-  margin: 10px 0px 0px 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
-.mainMenuPages .sectionMenus__divChoiceBand__choiceBand__divDescription {
-  display: flex;
-  margin-bottom: 10px;
-}
-.mainMenuPages .sectionMenus__divChoiceBand__choiceBand__divDescription__description {
+.mainMenuPages .sectionMenus__divChoiceBand .band__description__ingredient {
+  margin: 5px 0 0 0;
   font-size: 16px;
   font-weight: normal;
-  margin: 5px 0px 0px 10px;
-  flex: 5;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
-.mainMenuPages .sectionMenus__divChoiceBand__choiceBand__divDescription__price {
+.mainMenuPages .sectionMenus__divChoiceBand .band__price {
   font-size: 16px;
   font-weight: bold;
-  margin: 5px 0px 0px 0px;
-  flex: 1;
+  margin-left: auto;
+  margin-right: 25px;
+  padding-left: 200px;
+  display: flex;
+  align-items: flex-end;
+  padding: 12px 0px 12px 0px;
+}
+.mainMenuPages .sectionMenus__divChoiceBand .band__checkBox {
+  font-size: 16px;
+  font-weight: bold;
+  display: grid;
+  place-items: center;
+  margin-right: -4rem;
+  width: 4rem;
+  background: #99E2D0;
+  border-radius: 0px 15px 15px 0px;
+  padding: 12px 0px 12px 0px;
+  transition: margin-right 0.5s ease;
+}
+.mainMenuPages .sectionMenus__divChoiceBand .band__checkBox__checked {
+  background-color: white;
+  color: #99E2D0;
+  border-radius: 50%;
+  width: 20px;
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+  font-size: 14px;
+  font-weight: bold;
+}
+.mainMenuPages .sectionMenus__divChoiceBand .band:hover .band__checkBox {
+  margin-right: 0px;
+}
+.mainMenuPages .sectionMenus__divChoiceBand .band:hover i {
+  animation: band-spiner 0.5s ease;
 }
 
 .divOperationGuid {
@@ -260,26 +391,31 @@ body {
   text-decoration: none;
   color: black;
   background-color: #F7F7F7;
-  border-radius: 20px;
+  border-radius: 15px;
   box-shadow: 0px 5px 15px 0px #dbdbdb;
   margin-bottom: 20px;
-}
-.divOperationGuid .OperationGuidBand__divDescription {
-  display: flex;
   background-color: #F7F7F7;
   height: 75px;
   align-items: center;
-  border-radius: 25px;
+  border-radius: 15px;
 }
-.divOperationGuid .divIcon {
+.divOperationGuid .OperationGuidBand:hover {
+  background-color: #f2eafb;
+}
+.divOperationGuid .OperationGuidBand:hover .divIcon__icon {
+  color: #9356DC;
+}
+
+.divIcon {
   margin: 0px 25px 0px 35px;
 }
-.divOperationGuid .divIcon__icon {
+.divIcon__icon {
   color: rgb(159, 159, 159);
   font-size: 17.5px;
   font-weight: bold;
 }
-.divOperationGuid .divP__description {
+
+.divP__description {
   font-size: 16px;
   font-weight: bold;
 }
@@ -339,7 +475,7 @@ body {
   border-radius: 20px;
 }
 .restaurantsSection .restaurant__divDescription__divP {
-  flex: 4;
+  flex: 5;
   line-height: 10px;
 }
 .restaurantsSection .restaurant__divDescription__divP--restaurantName {
@@ -354,6 +490,7 @@ body {
 }
 .restaurantsSection .restaurant__divDescription__icon {
   flex: 1;
+  display: flex;
   position: relative;
   left: 80px;
   bottom: 5px;
@@ -363,6 +500,20 @@ body {
 .restaurantsSection .restaurant__divDescription__icon__heart {
   font-weight: normal;
   font-size: 25px;
+}
+.restaurantsSection .restaurant__divDescription__icon__heart--animation {
+  position: absolute;
+  opacity: 0;
+  color: #9356DC;
+  scale: 1;
+  transition: all 0.5s, transform 0.3s 0.2s;
+}
+.restaurantsSection .restaurant__divDescription__icon__heart--animation:hover {
+  opacity: 1;
+  transform: scale(1.15);
+  background: linear-gradient(to bottom, #9356DC 0%, #FF79DA 100%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
 }
 
 footer {
@@ -390,7 +541,7 @@ footer ul .link {
   color: white;
 }
 footer ul .link__colorListe {
-  color: #F7F7F7;
+  color: #d1d1d1;
 }
 footer ul .icon {
   font-size: 12px;

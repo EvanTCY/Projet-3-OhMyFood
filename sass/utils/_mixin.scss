@@ -3,7 +3,6 @@
     box-shadow: 0px 5px 15px 0px darken($backgroundColorPage, $darken);
 }
 
-
 /* describe the different font size for all page */
 @mixin fontLarge($font-weight: bold) {
     font-weight: $font-weight;
@@ -31,13 +30,20 @@
 /* base design fot button */
 @mixin button{
     @include textDecoration(white);
-    @include fontSmall(bold);
+    @include fontSmall(501);
     background: linear-gradient(to top left, $primaryColor, $secondaryColor);
-    padding: 1.3rem 2rem 1.3rem 2rem;
+    margin-left: auto;
+    margin-right: auto;
     border-radius: 60px;
     @include shadow(20%);
     letter-spacing: 0.5px;
     text-align: center;
+    transform: background-color, box-shadow;
+    transition: background-color 1s, box-shadow 0.5s 0.5s;
+    &:hover{
+        background: lighten($secondaryColor, 5%);
+        box-shadow: 0px 5px 15px 5px darken($backgroundColorPage, 25%);
+    }
 }
 
 /* base design for "Fonctionnement" and menu bands */
@@ -45,6 +51,10 @@
     display: flex;
     @include textDecoration;
     background-color: $color;
-    border-radius: 20px;
+    border-radius: 15px;
     @include shadow;
+}
+
+@mixin  paddingBand {
+    padding: 12px 0px 12px 0px;
 }

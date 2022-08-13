@@ -13,12 +13,16 @@
     .OperationGuidBand{
         @include band($backgroundColorPage);
         margin-bottom: 20px;
-        &__divDescription{
-            display: flex;
-            background-color: $backgroundColorPage;
-            height: 75px;
-            align-items: center;
-            border-radius: 25px;       
+        background-color: $backgroundColorPage;
+        height: 75px;
+        align-items: center;
+        border-radius: 15px; 
+            &:hover {
+                background-color: lighten($primaryColor, 35%);
+            }
+            &:hover .divIcon__icon{
+                color: $primaryColor;;
+            }         
         }
     }
     .divIcon{
@@ -33,7 +37,7 @@
             @include fontSmall(bold);
         }
     }
-}
+
 
 
 .restaurantsSection{
@@ -88,7 +92,7 @@
             bottom: 2px;
             border-radius: 20px;
             &__divP{
-                flex: 4;
+                flex: 5;
                 line-height: 10px;
                 &--restaurantName{
                     margin-left: 20px;
@@ -101,12 +105,30 @@
             }
             &__icon{
                 flex: 1;
+                display: flex;
                 position: relative;
                 left: 80px;
                 bottom: 5px;
-                @include fontLarge;  
+                @include fontLarge;
+
                 &__heart{
                     @include fontLarge(normal);
+                    &--animation{
+                        position: absolute;
+                        opacity: 0;
+                        color: $primaryColor;
+                        scale: 1;
+                        transition: all 0.5s, transform 0.3s 0.2s;
+                        
+                        &:hover{
+                            opacity: 1;
+                            transform: scale(1.15);
+                            background: linear-gradient(to bottom, $primaryColor 0%, $secondaryColor 100%);
+                            -webkit-text-fill-color:transparent;
+                            -webkit-background-clip: text;
+
+                        }
+                    }
                 }       
             }    
         } 

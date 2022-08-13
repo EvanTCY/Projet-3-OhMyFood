@@ -7,12 +7,12 @@
     background-color: #ffffff;
     z-index: 1;
     opacity: 0.9;
-    animation: disappear 0s 3s forwards;
+    animation: disappear 0s 1s forwards;
     &__divAnimation{
         display: grid;
         place-items: center;
         &__couverts{
-            animation: spin 1s infinite;
+            animation: loader-spiner 1s infinite;
             color: $primaryColor;
         }
         &__p{

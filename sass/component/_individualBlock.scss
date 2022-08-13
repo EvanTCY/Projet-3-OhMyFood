@@ -3,13 +3,15 @@
     @include button;
     position: relative;
     top: 35px;
+    padding: 1.2rem;
 }
 /* the button take place just above the menu pages footer */ 
 .orderButton{
     @include button;
-    position: relative;
     bottom: 30px;
-    margin: 0px 80px 0px 80px;  
+    padding: 1rem 3rem 1rem 3rem;
+    position: relative;
+    bottom: 20px;
 }   
 
 /* arrow icon take place beside the logo, in menu pages */
