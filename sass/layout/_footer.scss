@@ -1,11 +1,17 @@
 footer{
     background-color: $footerColor;
+    @include responsive{
+        text-align: center;
+    }
     h3{
         font-family: 'Shrikhand', cursive;
         @include fontMedium;
         color: white;
         margin-left: 20px;
-        padding-top: 20px;
+        padding-top: 50px;
+        @include responsive{
+            font-size: $fontMedium;
+        }
     }
     ul{
         margin: 0px;
@@ -14,6 +20,10 @@ footer{
         right: 15px;
         line-height: 22px;
         padding-bottom: 30px;
+        @include responsive{
+            font-size: $fontSmallMax;
+            line-height: 28px;
+        }
     
         .link{
             @include textDecoration(white);
@@ -24,10 +34,16 @@ footer{
         .icon{
             font-size: 12px;
             margin-right: 10px;
+            @include responsive{
+                font-size: $fontSmallMax;
+        }
             &--resize{
                 font-size: 9px;
-                margin-right: 10px 
-            }
-        }     
+                margin-right: 10px; 
+                @include responsive{
+                    font-size: $fontSmallMax;
+                }
+            }     
+        }
     }
 }

@@ -1,3 +1,9 @@
+.sectionFonctionnement{
+    @include responsive{
+        margin-top: 80px;
+    }
+}
+
 .divOperationGuid{
     margin: 0px 20px 0px 20px;
     .numbering{
@@ -9,6 +15,23 @@
         margin-top: 25px;
         position: absolute;
         left: 10px;
+        @include responsive{
+            display: none;
+        }
+        &--display{
+            display: none;
+            background-color: $primaryColor;
+            color: white;
+            font-size: $fontSmall;
+            border-radius: 50%;
+            padding: 2px 7px 2px 7px;
+            margin-top: 25px;
+            position: relative;
+            right: 10px;
+            @include responsive{
+                display: block
+            }
+        }
     }
     .OperationGuidBand{
         @include band($backgroundColorPage);
@@ -17,6 +40,13 @@
         height: 75px;
         align-items: center;
         border-radius: 15px; 
+        @include responsive{
+            max-width: 50%;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 30px;
+            font-size: $fontSmall;
+        }
             &:hover {
                 background-color: lighten($primaryColor, 35%);
             }
@@ -30,11 +60,17 @@
        &__icon{
             color: rgb(159, 159, 159);
             @include fontMedium(bold); 
+            @include responsive{
+                font-size: $fontMedium;
+            }
        }
     }
     .divP{
         &__description{
             @include fontSmall(bold);
+            @include responsive{
+                font-size: $fontSmall;
+            }
         }
     }
 
@@ -45,6 +81,9 @@
     margin-top: 40px;
     position: relative;
     top: 20px;
+    @include responsive{
+        margin-top: 80px;
+    }
 
     .restaurantsTitle{
         padding-top: 50px;
@@ -55,6 +94,13 @@
         flex-direction: column;
         justify-content: center;
         padding-bottom: 50px;
+        @include responsive{
+            max-width: 1619px;
+            margin-right: auto;
+            margin-left: auto;
+            flex-wrap: wrap;
+            flex-direction: row;
+        }
     }
     .restaurant{
         @include textDecoration;
@@ -63,6 +109,11 @@
         @include shadow;
         border-radius: 20px;
         background-color: $backgroundColorPage;
+        @include responsive{
+            height: 350px;
+            width: 500px;
+        }
+
         &__img{
             height: 70%;
             width: 100% ;
@@ -80,6 +131,10 @@
             color: darken($tertiaryColor, 40%);
             padding: 7px 10px 7px 10px;
             border-radius: 3px;
+            @include responsive{
+                font-size: $fontSmallMax;
+                bottom: 250px;
+            }
             &--opacity{
                 opacity: 0;
             }
@@ -91,16 +146,28 @@
             position: relative;
             bottom: 2px;
             border-radius: 20px;
+            @include responsive{
+                top: 5px;
+            }
             &__divP{
                 flex: 5;
                 line-height: 10px;
+                @include responsive{
+                    flex: 7;
+                }
                 &--restaurantName{
                     margin-left: 20px;
                     @include fontMedium(bold);
+                    @include responsive{
+                        font-size: $fontMedium;
+                    }
                 }
                 &--restaurantLocalisation{
                     margin-left: 20px;
                     @include fontMedium;
+                    @include responsive{
+                        font-size: $fontMedium;
+                    }
                 }
             }
             &__icon{
@@ -109,16 +176,21 @@
                 position: relative;
                 left: 80px;
                 bottom: 5px;
-                @include fontLarge;
 
                 &__heart{
                     @include fontLarge(normal);
+                    @include responsive{
+                        font-size: $fontLarge;
+                    }
                     &--animation{
                         position: absolute;
                         opacity: 0;
                         color: $primaryColor;
                         scale: 1;
                         transition: all 0.5s, transform 0.3s 0.2s;
+                        @include responsive{
+                            font-size: $fontLarge;
+                        }
                         
                         &:hover{
                             opacity: 1;

@@ -40,6 +40,9 @@
     text-align: center;
     transform: background-color, box-shadow;
     transition: background-color 1s, box-shadow 0.5s 0.5s;
+    @include responsive{
+        font-size: $fontSmall;
+    }
     &:hover{
         background: lighten($secondaryColor, 5%);
         box-shadow: 0px 5px 15px 5px darken($backgroundColorPage, 25%);
