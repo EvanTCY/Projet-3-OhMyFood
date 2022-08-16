@@ -11,7 +11,6 @@
     bottom: 30px;
     padding: 1rem 3rem 1rem 3rem;
     position: relative;
-    bottom: 20px;
 }   
 
 /* arrow icon take place beside the logo, in menu pages */
@@ -28,10 +27,20 @@
     height: 300px;
     width: 100%;
     object-fit:cover;
+    @include responsive{
+        height: 450px;
+        border-bottom: solid 4px $secondaryColor;
+        border-top: solid 3px $primaryColor;
+    }   
 }
 
 /* design the two sections titles, home page */
 .sectionTitle{
     @include fontLarge;
     margin: 50px 0px 30px 20px;
+    @include responsive{
+        font-size: $fontLarge;
+        text-align: center;
+        margin: 50px 0px 50px 0px;
+    }
 }

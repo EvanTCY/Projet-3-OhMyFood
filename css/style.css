@@ -65,6 +65,11 @@ a {
   top: 35px;
   padding: 1.2rem;
 }
+@media screen and (min-width: 644px) {
+  .exploreButton {
+    font-size: 21px;
+  }
+}
 .exploreButton:hover {
   background: #ff93e1;
   box-shadow: 0px 5px 15px 5px #b7b7b7;
@@ -88,7 +93,11 @@ a {
   bottom: 30px;
   padding: 1rem 3rem 1rem 3rem;
   position: relative;
-  bottom: 20px;
+}
+@media screen and (min-width: 644px) {
+  .orderButton {
+    font-size: 21px;
+  }
 }
 .orderButton:hover {
   background: #ff93e1;
@@ -112,12 +121,26 @@ a {
   width: 100%;
   object-fit: cover;
 }
+@media screen and (min-width: 644px) {
+  .banner {
+    height: 450px;
+    border-bottom: solid 4px #FF79DA;
+    border-top: solid 3px #9356DC;
+  }
+}
 
 /* design the two sections titles, home page */
 .sectionTitle {
   font-weight: bold;
   font-size: 25px;
   margin: 50px 0px 30px 20px;
+}
+@media screen and (min-width: 644px) {
+  .sectionTitle {
+    font-size: 30px;
+    text-align: center;
+    margin: 50px 0px 50px 0px;
+  }
 }
 
 .loader {
@@ -157,6 +180,11 @@ a {
   position: relative;
   box-shadow: 0px 3px 5px #d1d1d1;
 }
+@media screen and (min-width: 644px) {
+  .header .logoDiv {
+    padding: 35px 0px 20px 0px;
+  }
+}
 .header .logoDiv--menu {
   padding: 25px 0px 15px 0px;
   box-shadow: none;
@@ -164,11 +192,22 @@ a {
   justify-content: center;
   align-items: center;
 }
+@media screen and (min-width: 644px) {
+  .header .logoDiv--menu {
+    padding: 35px 0px 35px 0px;
+  }
+}
 .header .logoDiv--menu__arrowLink {
   position: absolute;
   left: 30px;
   top: 33px;
   float: left;
+}
+@media screen and (min-width: 644px) {
+  .header .logoDiv--menu__arrowLink {
+    top: 40px;
+    left: 60px;
+  }
 }
 .header .logoDiv--menu__arrowLink__arrow {
   position: relative;
@@ -179,8 +218,18 @@ a {
   text-decoration: none;
   color: black;
 }
+@media screen and (min-width: 644px) {
+  .header .logoDiv--menu__arrowLink__arrow {
+    font-size: 30px;
+  }
+}
 .header .logoDiv__logo {
   height: 28px;
+}
+@media screen and (min-width: 644px) {
+  .header .logoDiv__logo {
+    height: 40px;
+  }
 }
 .header .position {
   display: flex;
@@ -188,6 +237,11 @@ a {
   background-color: #efefef;
   font-size: 16px;
   font-weight: bold;
+}
+@media screen and (min-width: 644px) {
+  .header .position {
+    font-size: 21px;
+  }
 }
 .header .position__icon {
   position: relative;
@@ -211,10 +265,20 @@ a {
   margin-top: 35px;
   margin-bottom: -5px;
 }
+@media screen and (min-width: 644px) {
+  .header .headerDescription__title1 {
+    font-size: 30px;
+  }
+}
 .header .headerDescription__title2 {
   font-size: 17.5px;
   font-weight: -weight;
   color: rgba(0, 0, 0, 0.781);
+}
+@media screen and (min-width: 644px) {
+  .header .headerDescription__title2 {
+    font-size: 22.5px;
+  }
 }
 
 /* only design for menu pages */
@@ -224,7 +288,27 @@ a {
   flex-direction: column;
   position: relative;
   top: 20px;
-  height: 1160px;
+  height: 1125px;
+}
+.mainMenuPages--laNoteEnchantee {
+  height: 1205px;
+}
+@media screen and (min-width: 644px) {
+  .mainMenuPages {
+    width: 70%;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    top: -150px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    box-shadow: 0px 5px 15px 0px #c4c4c4;
+    height: 1160px;
+    padding-bottom: 120px;
+  }
+  .mainMenuPages--laNoteEnchantee {
+    height: 1250px;
+  }
 }
 .mainMenuPages__divTitleMain {
   display: flex;
@@ -233,6 +317,11 @@ a {
   background-color: #F7F7F7;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
+}
+@media screen and (min-width: 644px) {
+  .mainMenuPages__divTitleMain {
+    text-align: center;
+  }
 }
 .mainMenuPages__divTitleMain__title {
   font-family: "Shrikhand", cursive;
@@ -243,6 +332,15 @@ a {
   font-size: 25px;
   flex: 5;
 }
+@media screen and (min-width: 644px) {
+  .mainMenuPages__divTitleMain__title {
+    font-size: 30px;
+    margin-left: 50px;
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+  }
+}
 .mainMenuPages__divTitleMain__divHeart {
   display: flex;
   flex: 2;
@@ -251,9 +349,21 @@ a {
   position: relative;
   top: 15px;
 }
+@media screen and (min-width: 644px) {
+  .mainMenuPages__divTitleMain__divHeart {
+    justify-content: flex-end;
+    margin-right: 50px;
+    flex: 1;
+  }
+}
 .mainMenuPages__divTitleMain .heart {
   font-weight: normal;
   font-size: 25px;
+}
+@media screen and (min-width: 644px) {
+  .mainMenuPages__divTitleMain .heart {
+    font-size: 30px;
+  }
 }
 .mainMenuPages__divTitleMain .heart--animation {
   opacity: 0;
@@ -264,6 +374,11 @@ a {
   text-shadow: 0 0 0 0 #9356DC;
   animation: pulse 1.3s infinite;
   transition: all 0.5s, transform 0.5s 0.3s;
+}
+@media screen and (min-width: 644px) {
+  .mainMenuPages__divTitleMain .heart--animation {
+    font-size: 30px;
+  }
 }
 .mainMenuPages__divTitleMain .heart--animation:hover {
   opacity: 1;
@@ -290,12 +405,22 @@ a {
 .mainMenuPages .sectionMenus__divTitleMenu__title {
   margin-bottom: 5px;
 }
+@media screen and (min-width: 644px) {
+  .mainMenuPages .sectionMenus__divTitleMenu__title {
+    font-size: 22.5px;
+  }
+}
 .mainMenuPages .sectionMenus__divTitleMenu__line {
   width: 40px;
   border: solid #99E2D0 1.5px;
   background-color: #99E2D0;
   margin: 0px;
   position: relative;
+}
+@media screen and (min-width: 644px) {
+  .mainMenuPages .sectionMenus__divTitleMenu__line {
+    width: 60px;
+  }
 }
 .mainMenuPages .sectionMenus__divChoiceBand {
   margin: 0px 15px 0px 15px;
@@ -325,12 +450,22 @@ a {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+@media screen and (min-width: 644px) {
+  .mainMenuPages .sectionMenus__divChoiceBand .band__description__title {
+    font-size: 22.5px;
+  }
+}
 .mainMenuPages .sectionMenus__divChoiceBand .band__description__ingredient {
   margin: 5px 0 0 0;
   font-size: 16px;
   font-weight: normal;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+@media screen and (min-width: 644px) {
+  .mainMenuPages .sectionMenus__divChoiceBand .band__description__ingredient {
+    font-size: 21px;
+  }
 }
 .mainMenuPages .sectionMenus__divChoiceBand .band__price {
   font-size: 16px;
@@ -341,6 +476,11 @@ a {
   display: flex;
   align-items: flex-end;
   padding: 12px 0px 12px 0px;
+}
+@media screen and (min-width: 644px) {
+  .mainMenuPages .sectionMenus__divChoiceBand .band__price {
+    font-size: 21px;
+  }
 }
 .mainMenuPages .sectionMenus__divChoiceBand .band__checkBox {
   font-size: 16px;
@@ -354,6 +494,11 @@ a {
   padding: 12px 0px 12px 0px;
   transition: margin-right 0.5s ease;
 }
+@media screen and (min-width: 644px) {
+  .mainMenuPages .sectionMenus__divChoiceBand .band__checkBox {
+    font-size: 21px;
+  }
+}
 .mainMenuPages .sectionMenus__divChoiceBand .band__checkBox__checked {
   background-color: white;
   color: #99E2D0;
@@ -365,11 +510,22 @@ a {
   font-size: 14px;
   font-weight: bold;
 }
+@media screen and (min-width: 644px) {
+  .mainMenuPages .sectionMenus__divChoiceBand .band__checkBox__checked {
+    font-size: 19px;
+  }
+}
 .mainMenuPages .sectionMenus__divChoiceBand .band:hover .band__checkBox {
   margin-right: 0px;
 }
 .mainMenuPages .sectionMenus__divChoiceBand .band:hover i {
   animation: band-spiner 0.5s ease;
+}
+
+@media screen and (min-width: 644px) {
+  .sectionFonctionnement {
+    margin-top: 80px;
+  }
 }
 
 .divOperationGuid {
@@ -386,6 +542,27 @@ a {
   position: absolute;
   left: 10px;
 }
+@media screen and (min-width: 644px) {
+  .divOperationGuid .numbering {
+    display: none;
+  }
+}
+.divOperationGuid .numbering--display {
+  display: none;
+  background-color: #9356DC;
+  color: white;
+  font-size: 21px;
+  border-radius: 50%;
+  padding: 2px 7px 2px 7px;
+  margin-top: 25px;
+  position: relative;
+  right: 10px;
+}
+@media screen and (min-width: 644px) {
+  .divOperationGuid .numbering--display {
+    display: block;
+  }
+}
 .divOperationGuid .OperationGuidBand {
   display: flex;
   text-decoration: none;
@@ -398,6 +575,15 @@ a {
   height: 75px;
   align-items: center;
   border-radius: 15px;
+}
+@media screen and (min-width: 644px) {
+  .divOperationGuid .OperationGuidBand {
+    max-width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    font-size: 21px;
+  }
 }
 .divOperationGuid .OperationGuidBand:hover {
   background-color: #f2eafb;
@@ -414,10 +600,20 @@ a {
   font-size: 17.5px;
   font-weight: bold;
 }
+@media screen and (min-width: 644px) {
+  .divIcon__icon {
+    font-size: 22.5px;
+  }
+}
 
 .divP__description {
   font-size: 16px;
   font-weight: bold;
+}
+@media screen and (min-width: 644px) {
+  .divP__description {
+    font-size: 21px;
+  }
 }
 
 .restaurantsSection {
@@ -425,6 +621,11 @@ a {
   margin-top: 40px;
   position: relative;
   top: 20px;
+}
+@media screen and (min-width: 644px) {
+  .restaurantsSection {
+    margin-top: 80px;
+  }
 }
 .restaurantsSection .restaurantsTitle {
   padding-top: 50px;
@@ -435,6 +636,15 @@ a {
   justify-content: center;
   padding-bottom: 50px;
 }
+@media screen and (min-width: 644px) {
+  .restaurantsSection .restaurantsContainer {
+    max-width: 1619px;
+    margin-right: auto;
+    margin-left: auto;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+}
 .restaurantsSection .restaurant {
   text-decoration: none;
   color: black;
@@ -443,6 +653,12 @@ a {
   box-shadow: 0px 5px 15px 0px #dbdbdb;
   border-radius: 20px;
   background-color: #F7F7F7;
+}
+@media screen and (min-width: 644px) {
+  .restaurantsSection .restaurant {
+    height: 350px;
+    width: 500px;
+  }
 }
 .restaurantsSection .restaurant__img {
   height: 70%;
@@ -463,6 +679,12 @@ a {
   padding: 7px 10px 7px 10px;
   border-radius: 3px;
 }
+@media screen and (min-width: 644px) {
+  .restaurantsSection .restaurant__new {
+    font-size: 19px;
+    bottom: 250px;
+  }
+}
 .restaurantsSection .restaurant__new--opacity {
   opacity: 0;
 }
@@ -474,19 +696,39 @@ a {
   bottom: 2px;
   border-radius: 20px;
 }
+@media screen and (min-width: 644px) {
+  .restaurantsSection .restaurant__divDescription {
+    top: 5px;
+  }
+}
 .restaurantsSection .restaurant__divDescription__divP {
   flex: 5;
   line-height: 10px;
+}
+@media screen and (min-width: 644px) {
+  .restaurantsSection .restaurant__divDescription__divP {
+    flex: 7;
+  }
 }
 .restaurantsSection .restaurant__divDescription__divP--restaurantName {
   margin-left: 20px;
   font-size: 17.5px;
   font-weight: bold;
 }
+@media screen and (min-width: 644px) {
+  .restaurantsSection .restaurant__divDescription__divP--restaurantName {
+    font-size: 22.5px;
+  }
+}
 .restaurantsSection .restaurant__divDescription__divP--restaurantLocalisation {
   margin-left: 20px;
   font-size: 17.5px;
   font-weight: normal;
+}
+@media screen and (min-width: 644px) {
+  .restaurantsSection .restaurant__divDescription__divP--restaurantLocalisation {
+    font-size: 22.5px;
+  }
 }
 .restaurantsSection .restaurant__divDescription__icon {
   flex: 1;
@@ -494,12 +736,15 @@ a {
   position: relative;
   left: 80px;
   bottom: 5px;
-  font-weight: bold;
-  font-size: 25px;
 }
 .restaurantsSection .restaurant__divDescription__icon__heart {
   font-weight: normal;
   font-size: 25px;
+}
+@media screen and (min-width: 644px) {
+  .restaurantsSection .restaurant__divDescription__icon__heart {
+    font-size: 30px;
+  }
 }
 .restaurantsSection .restaurant__divDescription__icon__heart--animation {
   position: absolute;
@@ -507,6 +752,11 @@ a {
   color: #9356DC;
   scale: 1;
   transition: all 0.5s, transform 0.3s 0.2s;
+}
+@media screen and (min-width: 644px) {
+  .restaurantsSection .restaurant__divDescription__icon__heart--animation {
+    font-size: 30px;
+  }
 }
 .restaurantsSection .restaurant__divDescription__icon__heart--animation:hover {
   opacity: 1;
@@ -519,13 +769,23 @@ a {
 footer {
   background-color: rgba(0, 0, 0, 0.781);
 }
+@media screen and (min-width: 644px) {
+  footer {
+    text-align: center;
+  }
+}
 footer h3 {
   font-family: "Shrikhand", cursive;
   font-size: 17.5px;
   font-weight: normal;
   color: white;
   margin-left: 20px;
-  padding-top: 20px;
+  padding-top: 50px;
+}
+@media screen and (min-width: 644px) {
+  footer h3 {
+    font-size: 22.5px;
+  }
 }
 footer ul {
   margin: 0px;
@@ -535,6 +795,12 @@ footer ul {
   right: 15px;
   line-height: 22px;
   padding-bottom: 30px;
+}
+@media screen and (min-width: 644px) {
+  footer ul {
+    font-size: 19px;
+    line-height: 28px;
+  }
 }
 footer ul .link {
   text-decoration: none;
@@ -547,9 +813,19 @@ footer ul .icon {
   font-size: 12px;
   margin-right: 10px;
 }
+@media screen and (min-width: 644px) {
+  footer ul .icon {
+    font-size: 19px;
+  }
+}
 footer ul .icon--resize {
   font-size: 9px;
   margin-right: 10px;
+}
+@media screen and (min-width: 644px) {
+  footer ul .icon--resize {
+    font-size: 19px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

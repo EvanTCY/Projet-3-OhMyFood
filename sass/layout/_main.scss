@@ -6,7 +6,25 @@
     flex-direction: column;
     position: relative;
     top: 20px;
-    height: 1160px;
+    height: 1125px;
+    &--laNoteEnchantee{
+        height: 1205px;
+    }
+    @include responsive{
+        width: 70%;
+        max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+        top: -150px;
+        border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+        @include shadow(20%);
+        height: 1160px;
+        padding-bottom: 120px;
+        &--laNoteEnchantee{
+            height: 1250px;
+        }
+    }
     
     &__divTitleMain{
         display: flex;
@@ -15,6 +33,10 @@
         background-color: $backgroundColorPage;
         border-top-left-radius: 30px;
         border-top-right-radius: 30px;
+        @include responsive{
+            text-align: center;
+        }
+
         &__title{
             font-family: 'Shrikhand', cursive;
             margin-left: 20px;
@@ -22,6 +44,13 @@
             padding-top: 15px;
             @include fontLarge(normal);
             flex: 5;
+            @include responsive{
+                font-size: $fontLarge;
+                margin-left: 50px;
+                flex: 1;
+                display: flex;
+                justify-content: flex-start;
+            }
         }
         &__divHeart{
             display: flex;
@@ -30,9 +59,17 @@
             align-items: center;
             position: relative;
             top: 15px; 
+            @include responsive{
+                justify-content: flex-end;
+                margin-right: 50px;
+                flex: 1;
+            }
         }
         .heart{
             @include fontLarge(normal);
+            @include responsive{
+                font-size: $fontLarge;
+            }
             &--animation{
                 opacity: 0;
                 font-size: 25px;
@@ -42,6 +79,9 @@
                 text-shadow: 0 0 0 0 $primaryColor;
                 animation: pulse 1.3s infinite;
                 transition: all 0.5s, transform 0.5s 0.3s;
+                @include responsive{
+                    font-size: $fontLarge;
+                }
                 &:hover{
                     opacity: 1;
                     transform: scale(1.15);
@@ -49,8 +89,8 @@
                     -webkit-text-fill-color:transparent;
                     -webkit-background-clip: text;
                 }
-            }  
-        }    
+            }
+        }
     }
 
     .sectionMenus{
@@ -68,6 +108,9 @@
             @include fontMedium;
             &__title{
                 margin-bottom: 5px;
+                @include responsive{
+                    font-size: $fontMedium;
+                }
             }
             &__line{
                 width: 40px;
@@ -75,6 +118,9 @@
                 background-color: $tertiaryColor;
                 margin: 0px;
                 position: relative;
+                @include responsive{
+                    width: 60px;
+                }
             }
         }
     
@@ -97,12 +143,18 @@
                         @include fontMedium(bold);
                         overflow: hidden;
                         text-overflow: ellipsis;
+                        @include responsive{
+                            font-size: $fontMedium;
+                        }
                     }
                     &__ingredient{
                         margin: 5px 0 0 0;
                         @include fontSmall;
                         overflow: hidden;
                         text-overflow: ellipsis;
+                        @include responsive{
+                            font-size: $fontSmall;
+                        }
                     }
                 }
             
@@ -114,6 +166,9 @@
                     display: flex;
                     align-items: flex-end;
                     @include paddingBand;
+                    @include responsive{
+                        font-size: $fontSmall;
+                    }
                 }
             
                 &__checkBox{
@@ -127,6 +182,9 @@
                     border-radius: 0px 15px 15px 0px;
                     @include paddingBand;
                     transition: margin-right .5s ease;
+                    @include responsive{
+                        font-size: $fontSmall;
+                    }
                     &__checked{
                         background-color: white;
                         color: $tertiaryColor;
@@ -136,6 +194,9 @@
                         display: grid;
                         place-items: center;
                         @include fontSmallMax(bold);
+                        @include responsive{
+                            font-size: $fontSmallMax;
+                        }
                     }
                 }
                 &:hover {
