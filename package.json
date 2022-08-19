@@ -4,7 +4,7 @@
   "description": "Réalisation de la maquette ohmyfood dans le cadre de la soutenance du projet 3 (Dynamisez une page web avec des animations CSS)",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./sass/main.scss:./css/style.cssn",
+    "sass": "sass --watch ./sass/main.scss:./css/style.css",
     "prefix": "postcss ./css/style.css --use autoprefixer -d ./css/prefixed/"
   }, 
   "author": "Evan TCHING CHI YEN",
