@@ -1,8 +1,7 @@
-/* only design the home page header */
+
 .header{
     text-align: center;
-    
-    /* but this part is also apply for the logo in menu pages*/
+
     .logoDiv{
         padding: 25px 0px 10px 0px;
         /*the intervention of "position : relative" places "logoDiv" on top of the class ".position". 
@@ -12,6 +11,7 @@
         @include responsive{
             padding: 35px 0px 20px 0px;
         }
+        /* only design the menu page header */
         &--menu{
             padding: 25px 0px 15px 0px;
             box-shadow: none;
@@ -38,14 +38,21 @@
                     @include responsive{
                         font-size: $fontLarge;
                     }
+                    @include mobileResponsive{
+                        font-size: $fontLargeMobile;
+                    }
                 }
             }
-
         }
+         /* End of "only design the menu page header" */
+
         &__logo{
             height: 28px;
             @include responsive{
                 height: 40px;
+            }
+            @include mobileResponsive{
+                height: 25px;
             }
         }
     } 
@@ -57,6 +64,9 @@
         @include fontSmall(bold);
         @include responsive{
             font-size: $fontSmall;
+        }
+        @include mobileResponsive{
+            font-size: $fontSmallMobile;
         }
         &__icon{
             position: relative;
@@ -76,18 +86,24 @@
         height: 300px;
         padding: 0px 40px 0px 40px;
         &__title1{
-            @include fontLarge;
+            @include fontLarge(bold);
             margin-top: 35px ;
             margin-bottom: -5px;
             @include responsive{
                 font-size: $fontLarge;
             }
+            @include mobileResponsive{
+                font-size: $fontLargeMobile;
+            }
         }
         &__title2{
-            @include fontMedium(-weight);
+            @include fontMedium;
             color: $footerColor;
             @include responsive{
                 font-size: $fontMedium;
+            }
+            @include mobileResponsive{
+                font-size: $fontMediumMobile;
             }
         }
     }

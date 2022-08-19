@@ -41,11 +41,15 @@
         align-items: center;
         border-radius: 15px; 
         @include responsive{
-            max-width: 50%;
+            width: 60%;
+            max-width: 5    00px;
             margin-left: auto;
             margin-right: auto;
             margin-bottom: 30px;
             font-size: $fontSmall;
+        }
+        @include mobileResponsive{
+            font-size: $fontSmallMobile;
         }
             &:hover {
                 background-color: lighten($primaryColor, 35%);
@@ -57,11 +61,17 @@
     }
     .divIcon{
         margin: 0px 25px 0px 35px;
+        @include responsive{
+            margin: 0px 25px 0px 15px;
+        }
        &__icon{
             color: rgb(159, 159, 159);
             @include fontMedium(bold); 
             @include responsive{
                 font-size: $fontMedium;
+            }
+            @include mobileResponsive{
+                font-size: $fontMediumMobile;
             }
        }
     }
@@ -70,6 +80,9 @@
             @include fontSmall(bold);
             @include responsive{
                 font-size: $fontSmall;
+            }
+            @include mobileResponsive{
+                font-size: $fontSmallMobile;
             }
         }
     }
@@ -113,6 +126,9 @@
             height: 350px;
             width: 500px;
         }
+        @include mobileResponsive{
+            height: 230px;
+        }
 
         &__img{
             height: 70%;
@@ -135,6 +151,10 @@
                 font-size: $fontSmallMax;
                 bottom: 250px;
             }
+            @include mobileResponsive{
+                font-size: $fontSmallMaxMobile;
+                bottom: 165px;
+            }
             &--opacity{
                 opacity: 0;
             }
@@ -155,11 +175,17 @@
                 @include responsive{
                     flex: 7;
                 }
+                @include mobileResponsive{
+                    flex: 3;
+                }
                 &--restaurantName{
                     margin-left: 20px;
                     @include fontMedium(bold);
                     @include responsive{
                         font-size: $fontMedium;
+                    }
+                    @include mobileResponsive{
+                        font-size: $fontMediumMobile;
                     }
                 }
                 &--restaurantLocalisation{
@@ -167,6 +193,9 @@
                     @include fontMedium;
                     @include responsive{
                         font-size: $fontMedium;
+                    }
+                    @include mobileResponsive{
+                        font-size: $fontMediumMobile;
                     }
                 }
             }
@@ -181,20 +210,22 @@
                     @include fontLarge(normal);
                     @include responsive{
                         font-size: $fontLarge;
+                        &:hover{
+                            opacity: 0;
+                        }
                     }
                     &--animation{
                         position: absolute;
                         opacity: 0;
                         color: $primaryColor;
-                        scale: 1;
                         transition: all 0.5s, transform 0.3s 0.2s;
+                        @include fontLarge(bold);
                         @include responsive{
                             font-size: $fontLarge;
-                        }
-                        
+                        }     
                         &:hover{
                             opacity: 1;
-                            transform: scale(1.15);
+                            transform: scale(1.1);
                             background: linear-gradient(to bottom, $primaryColor 0%, $secondaryColor 100%);
                             -webkit-text-fill-color:transparent;
                             -webkit-background-clip: text;

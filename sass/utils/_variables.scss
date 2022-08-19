@@ -4,8 +4,14 @@ $tertiaryColor: #99E2D0;
 $backgroundColorPage: #F7F7F7;
 $footerColor: rgba(0, 0, 0, 0.781);
 
-
+/*these variables are implement for the desktop-tablet responsive mode*/
 $fontLarge: 30px;
 $fontMedium: 22.5px;
 $fontSmall: 21px;
 $fontSmallMax: 19px;
+
+/*these variables are implement for the mobile responsive mode (max-width : 350px)*/
+$fontLargeMobile: 23px;
+$fontMediumMobile: 15.5px;
+$fontSmallMobile: 14px;
+$fontSmallMaxMobile: 13px;

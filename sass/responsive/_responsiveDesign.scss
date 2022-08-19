@@ -1,5 +1,11 @@
 @mixin responsive{
     @media screen and(min-width: 644px){
-        @content
+        @content;
+    }
+}
+
+@mixin mobileResponsive {
+    @media screen and(max-width: 350px){
+        @content;
     }
 }

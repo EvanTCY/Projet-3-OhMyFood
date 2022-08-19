@@ -28,7 +28,7 @@
     width: 100%;
     object-fit:cover;
     @include responsive{
-        height: 450px;
+        height: 300px;
         border-bottom: solid 4px $secondaryColor;
         border-top: solid 3px $primaryColor;
     }   
@@ -36,11 +36,14 @@
 
 /* design the two sections titles, home page */
 .sectionTitle{
-    @include fontLarge;
+    @include fontLarge(bold);
     margin: 50px 0px 30px 20px;
     @include responsive{
         font-size: $fontLarge;
         text-align: center;
         margin: 50px 0px 50px 0px;
+    }
+    @include mobileResponsive{
+        font-size: $fontLargeMobile;
     }
 }

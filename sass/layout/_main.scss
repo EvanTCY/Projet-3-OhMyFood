@@ -15,7 +15,7 @@
         max-width: 1000px;
         margin-left: auto;
         margin-right: auto;
-        top: -150px;
+        top: -80px;
         border-bottom-left-radius: 30px;
         border-bottom-right-radius: 30px;
         @include shadow(20%);
@@ -47,14 +47,16 @@
             @include responsive{
                 font-size: $fontLarge;
                 margin-left: 50px;
-                flex: 1;
                 display: flex;
                 justify-content: flex-start;
+            }
+            @include mobileResponsive{
+                font-size: $fontLargeMobile;
             }
         }
         &__divHeart{
             display: flex;
-            flex: 2;
+            flex: 1;
             justify-content: center;
             align-items: center;
             position: relative;
@@ -66,21 +68,24 @@
             }
         }
         .heart{
-            @include fontLarge(normal);
+            @include fontLarge;
             @include responsive{
                 font-size: $fontLarge;
             }
+            @include mobileResponsive{
+                font-size: $fontLargeMobile;
+            }
             &--animation{
                 opacity: 0;
-                font-size: 25px;
+                @include fontLarge(bold);
                 color: $primaryColor;
                 position: absolute;
-                scale: 1;
-                text-shadow: 0 0 0 0 $primaryColor;
-                animation: pulse 1.3s infinite;
                 transition: all 0.5s, transform 0.5s 0.3s;
                 @include responsive{
                     font-size: $fontLarge;
+                }
+                @include mobileResponsive{
+                    font-size: $fontLargeMobile;
                 }
                 &:hover{
                     opacity: 1;
@@ -106,10 +111,14 @@
         &__divTitleMenu{
             margin: -50px 0px 15px 20px;
             @include fontMedium;
+            
             &__title{
                 margin-bottom: 5px;
                 @include responsive{
                     font-size: $fontMedium;
+                }
+                @include mobileResponsive{
+                    font-size: $fontMediumMobile;
                 }
             }
             &__line{
@@ -146,6 +155,9 @@
                         @include responsive{
                             font-size: $fontMedium;
                         }
+                        @include mobileResponsive{
+                            font-size: $fontMediumMobile;
+                        }
                     }
                     &__ingredient{
                         margin: 5px 0 0 0;
@@ -154,6 +166,9 @@
                         text-overflow: ellipsis;
                         @include responsive{
                             font-size: $fontSmall;
+                        }
+                        @include mobileResponsive{
+                            font-size: $fontSmallMobile;
                         }
                     }
                 }
@@ -168,6 +183,9 @@
                     @include paddingBand;
                     @include responsive{
                         font-size: $fontSmall;
+                    }
+                    @include mobileResponsive{
+                        font-size: $fontSmallMobile;
                     }
                 }
             
@@ -185,17 +203,23 @@
                     @include responsive{
                         font-size: $fontSmall;
                     }
+                    @include mobileResponsive{
+                        font-size: $fontSmallMobile;
+                    }
                     &__checked{
                         background-color: white;
                         color: $tertiaryColor;
                         border-radius: 50%;
-                        width: 20px;
-                        aspect-ratio: 1;
+                        width: 25px;
+                        aspect-ratio: 1/1;
                         display: grid;
                         place-items: center;
                         @include fontSmallMax(bold);
                         @include responsive{
                             font-size: $fontSmallMax;
+                        }
+                        @include mobileResponsive{
+                            font-size: $fontSmallMaxMobile;
                         }
                     }
                 }

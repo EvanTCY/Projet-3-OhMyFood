@@ -4,7 +4,7 @@
 }
 
 /* describe the different font size for all page */
-@mixin fontLarge($font-weight: bold) {
+@mixin fontLarge($font-weight: normal) {
     font-weight: $font-weight;
     font-size: 25px;
 }
@@ -38,10 +38,12 @@
     @include shadow(20%);
     letter-spacing: 0.5px;
     text-align: center;
-    transform: background-color, box-shadow;
     transition: background-color 1s, box-shadow 0.5s 0.5s;
     @include responsive{
         font-size: $fontSmall;
+    }
+    @include mobileResponsive{
+        font-size: $fontSmallMobile;
     }
     &:hover{
         background: lighten($secondaryColor, 5%);

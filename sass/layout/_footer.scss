@@ -24,11 +24,10 @@ footer{
             font-size: $fontSmallMax;
             line-height: 28px;
         }
-    
         .link{
             @include textDecoration(white);
-            &__colorListe{
-                color: darken($backgroundColorPage, 15%);
+            &--color{
+                color: darken($backgroundColorPage, 15%); 
             }
         }
         .icon{
@@ -36,7 +35,7 @@ footer{
             margin-right: 10px;
             @include responsive{
                 font-size: $fontSmallMax;
-        }
+            }
             &--resize{
                 font-size: 9px;
                 margin-right: 10px; 
