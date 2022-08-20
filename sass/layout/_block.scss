@@ -119,9 +119,9 @@
         @include textDecoration;
         height: 250px;
         margin: 0px 20px 20px 20px;
+        background-color: white;
         @include shadow;
         border-radius: 20px;
-        background-color: $backgroundColorPage;
         @include responsive{
             height: 350px;
             width: 500px;
@@ -162,7 +162,6 @@
         &__divDescription{
             display: flex;
             align-items: center;
-            background-color: $backgroundColorPage;
             position: relative;
             bottom: 2px;
             border-radius: 20px;
